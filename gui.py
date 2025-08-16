@@ -21,7 +21,7 @@ from dados import criar_tabelas
 
 DB_NAME = 'Biblioteca.db'
 
-# === NOVA PALETA DE CORES ===
+# === PALETA DE CORES ===
 PRIMARY_COLOR = "#9B27B0"
 PRIMARY_LIGHT = "#BA68C8"
 PRIMARY_DARK = "#6A0080"
