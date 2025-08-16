@@ -241,7 +241,7 @@ class LoginScreen(QWidget):
         main_layout.setAlignment(Qt.AlignCenter)
         self.setStyleSheet(f"background-color: {BG_COLOR};")
         
-        # Adicionar o logo com fundo transparente
+        # Logo
         logo_label = QLabel()
         logo_label.setStyleSheet("background-color: transparent;")
         pixmap = QPixmap("logo_UFPel.png")
@@ -493,7 +493,6 @@ class AddMaterialScreen(QWidget):
             form_layout.addWidget(line_edit, i, 1)
             self.fields[name.replace(":", "")] = line_edit
 
-        # Substituição do QComboBox por QRadioButtons
         type_label = QLabel("Tipo de material:")
         type_label.setStyleSheet(f"color: {TEXT_COLOR}; background-color: transparent;")
         
@@ -865,7 +864,7 @@ class MaterialDetailsScreen(QWidget):
             self.details_layout.addWidget(QLabel(f"<b>Ano:</b> {material['ano']}"), 1, 0)
             self.details_layout.addWidget(QLabel(f"<b>Categoria:</b> {material['categoria']}"), 2, 0)
             
-            # Limpar lista de resenhas anterior e carregar novas
+            # Limpa a lista de resenhas anteriores e carrega novas
             self.reviews_list.clear()
             reviews = self.biblioteca.listar_resenhas_material(material_id)
             if reviews:
